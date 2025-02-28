@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/yourusername/ci-cd-project.git'
+                git branch: 'main', url: 'https://github.com/aurafat/ci-cd-project.git'
             }
         }
         stage('Build') {
