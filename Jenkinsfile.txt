@@ -17,10 +17,11 @@ pipeline {
             }
         }
         stage('Deploy') {
-    steps {
-        withEnv(["KUBECONFIG=C:\\Users\\ASUS\\.kube\\config"]) {
-            sh 'kubectl apply -f k8s-deployment.yaml'
-        }
-    }
-}
-
+            steps {
+                withEnv(["KUBECONFIG=C:\\Users\\ASUS\\.kube\\config"]) {
+                    sh 'kubectl apply -f k8s-deployment.yaml'
+                }
+            }
+        } // Closing brace for 'Deploy' stage
+    } // Closing brace for 'stages'
+} // Closing brace for 'pipeline'
